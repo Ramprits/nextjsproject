@@ -38,6 +38,12 @@ const index = () => {
                   <a className="nav-link">Blog</a>
                 </Link>
               </li>
+
+              <li className="nav-item">
+                <Link href="/post" activeClassName="active">
+                  <a className="nav-link">Post</a>
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
