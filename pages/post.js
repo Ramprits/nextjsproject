@@ -28,7 +28,7 @@ export default class post extends Component {
         <li key={post.id}>
           <Link
             as={`/postDetail/${post.id}`}
-            href={`/postDetail?title=${post.title}`}
+            href={`/postDetail?id=${post.id}`}
           >
             <a>{post.title}</a>
           </Link>
