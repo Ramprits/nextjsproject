@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Link from "next/link";
+import { Link } from "../routes";
 import Layout from "../components/layout";
 import axios from "axios";
 export default class post extends Component {
@@ -26,10 +26,7 @@ export default class post extends Component {
     return posts.map(post => {
       return (
         <li key={post.id}>
-          <Link
-            as={`/postDetail/${post.id}`}
-            href={`/postDetail?id=${post.id}`}
-          >
+          <Link route={`/postDetail/${post.id}`}>
             <a>{post.title}</a>
           </Link>
         </li>

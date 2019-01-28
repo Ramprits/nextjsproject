@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "next/router";
+import Link from "next/link";
 import axios from "axios";
 import Layout from "../components/layout";
 
@@ -21,6 +22,9 @@ class Portfolio extends React.Component {
       <Layout>
         {portfolio.title}
         <p>{portfolio.body}</p>
+        <Link href="/post">
+          <a className="btn-link"> go back!</a>
+        </Link>
       </Layout>
     );
   }
