@@ -10,11 +10,17 @@ app
   .then(() => {
     const server = express();
 
+    server.get("/postDetail/:id", (req, res) => {
+      const actualPage = "/postDetail";
+      const queryParams = { title: req.params.id };
+      app.render(req, res, actualPage, queryParams);
+    });
+
     server.get("*", (req, res) => {
       return handle(req, res);
     });
-
-    server.listen(3000, err => {
+    const PORT = process.env.PORT || 3000;
+    server.listen(PORT, err => {
       if (err) throw err;
       console.log("> Ready on http://localhost:3000");
     });
